@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Hi {{donnees.name}}</h1>
+<div mat-dialog-content>
+  <p>What's your favorite animal?</p>
+
+  <input matInput [(ngModel)]="donnees.animal">
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="donnees.animal" cdkFocusInitial>Ok</button>
+</div>
