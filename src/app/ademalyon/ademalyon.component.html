@@ -4,15 +4,12 @@
     <mat-card-title>Constellation d'Orion</mat-card-title>
     <mat-card-subtitle>La carte du ciel</mat-card-subtitle>
   </mat-card-header>
-  <img
-    mat-card-image
-    src="http://thestarsandplanets.com/space/constellations/images/orion.png?w=250&h=142"
-    alt="Photo of a Shiba Inu"
-  />
+  <img mat-card-image src="http://thestarsandplanets.com/space/constellations/images/orion.png?w=250&h=142"
+    alt="Photo of a Shiba Inu" />
   <mat-card-content>
     <p>
-      La constellation d'orion est reconnaissable surtout pour ses 9 étoile facilement reconnaissable. Nous avons
-      Beltegeuse, Rigel, Bellatrix, Mintaka, Alnilam, Saiph et sa ceinture composé de trois étoiles Alnitak
+      La constellation d'orion est reconnaissable surtout pour ses 8 étoile facilement reconnaissable. Nous avons
+      Beltegeuse, Meissa, Bellatrix, Rigel, Saiph et sa ceinture composé de trois étoiles Alnitak, Alnilam, Mintaka,
     </p>
   </mat-card-content>
   <mat-card-actions>
@@ -20,3 +17,9 @@
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>
+
+<mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+    {{tile.text}}
+  </mat-grid-tile>
+</mat-grid-list>
